@@ -1,15 +1,10 @@
-let currencyElement = document.querySelector(".js-form__select");
-let amountElement = document.querySelector(".js-form__input");
-let valueElement = document.querySelector(".js-value");
-let submitElement = document.querySelector(".js-form__submit");
-let formElement = document.querySelector(".js-form");
+{
+const currencyElement = document.querySelector(".js-form__select");
+const amountElement = document.querySelector(".js-form__input");
+const valueElement = document.querySelector(".js-value");
+const formElement = document.querySelector(".js-form");
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-    let amount = amountElement.value;
-    let currency = currencyElement.value;
-    let value;
-    let currencyName;
+const calculateValue = (amount, currency) => {
     switch (currency){
         case "BGN":
             value = amount * 0.4398;
@@ -24,5 +19,16 @@ formElement.addEventListener("submit", (event) => {
             currencyName = "USD";
             break;
     }
+}
+
+formElement.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const amount = amountElement.value;
+    const currency = currencyElement.value;
+    let value = calculateValue(amount, currency);
+    let currencyName;
+
     valueElement.innerHTML = value.toFixed(2) + currencyName;
 })
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Kalkulator walutowy</title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <form class="js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">
+                <h1>Currency Converter</h1>
+            </legend>
+            <p>
+                <label for="kwota"><h2>Wpisz ile PLN chcesz wymienić</h2>
+                    <input  class="js-form__input" type="number" required min="1" step="any" value="10"/>
+                </label>
+            </p>
+            <p>
+                <label for="waluta"><h3>Wybierz walutę, na którą wymieniasz</h3>
+                    <select class="js-form__select" name="waluta">
+                        <option>BGN</option>
+                        <option>EUR</option>
+                        <option>USD</option>
+                    </select>
+                </label>
+            </p>
+            <input type="submit" class="js-form__submit">
+        <p class="text">
+            <h4>Możesz kupić <stron class="js-value"></stron> </h4>
+        </p>
+        </fieldset>
+        
+    </form>
+    
+</body>
+
+</html>

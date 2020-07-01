@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+.form{
+    padding: 200px;
+    margin: 50px;
+    border-radius: 30%;
+    background-color: lemonchiffon;
+
+}
+
+.form__fieldset{
+    border-radius: 30px;
+    background-color: rgb(144, 238, 144);
+    float: left;
+    width: 700px;
+}
+
+*{
+    text-align: center;
+}
+
+.form__legend, .text {
+    text-align: left;
+}
